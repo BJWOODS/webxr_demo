@@ -21,7 +21,18 @@
                 const mesh = meshes[0];
                 mesh.position = new BABYLON.Vector3(-0.6, 0, 0);
                 mesh.scaling = new BABYLON.Vector3(0.33, 0.33, 0.33);
+                
                  }
+                 mesh.actionManager = new BABYLON.ActionManager(scene);
+                 mesh.actionManager.registerAction(
+                     new BABYLON.ExecuteCodeAction(
+                         BABYLON.ActionManager.OnPickTrigger,
+                         function () {
+                             // Replace 'http://example.com' with the URL you want to navigate to
+                             window.location.href = 'https://tongyuzhou.com/#/';
+                         }
+                     )
+                 );
             });
         });
         
@@ -36,7 +47,20 @@
                 const mesh = meshes[0];
                 mesh.position = new BABYLON.Vector3(-0.2, 0, 0);
                 mesh.scaling = new BABYLON.Vector3(0.35, 0.35, 0.35);
+      
                  }
+                 mesh.actionManager = new BABYLON.ActionManager(scene);
+                 mesh.actionManager.registerAction(
+                     new BABYLON.ExecuteCodeAction(
+                         BABYLON.ActionManager.OnPickTrigger,
+                         function () {
+                             // Replace 'http://example.com' with the URL you want to navigate to
+                             window.location.href = 'https://g1isgone.github.io/';
+                         }
+                     )
+                 );
+
+
             });
         });
         BABYLON.SceneLoader.ImportMesh("", "brandon/", "brandon_avatar.glb", scene, function (meshes) {
